@@ -17,7 +17,7 @@
  * - Cron Trigger : 自动签到
  */
 
-const DEFAULT_UPSTREAM = "https://anyrouter.zhx47.deno.net";
+const DEFAULT_UPSTREAM = "https://anyrouter.top";
 
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
