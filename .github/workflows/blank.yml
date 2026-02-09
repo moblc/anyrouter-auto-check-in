@@ -1,0 +1,23 @@
+name: anyrouter
+on:
+  schedule:
+    - cron:  '30 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  sign:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v6
+      with:
+        node-version: 24
+    - name: anyrouter
+      continue-on-error: true
+      timeout-minutes: 2
+      env:
+        COOKIES: "xxxxxx"
+        TG_BOT_TOKEN: "xxxxxx"
+        TG_CHAT_ID: "xxxxx"
+      run: |
+        node anyrouter.js
